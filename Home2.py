@@ -13,7 +13,7 @@ def priority_encoder(X):
         return (0, 0, 1)
 
 
-inputs = [1, 0, 0, 0] # Входные сигналы
+inputs = [0, 0, 1, 0] # Входные сигналы
 output = priority_encoder(inputs)
 print(f"Выход: a1={output[0]}, a0={output[1]}, E={output[2]}")
 
@@ -26,7 +26,7 @@ plt.ylabel('Сигнал')
 plt.show()
 
 # Выходные сигналы
-output_signals = [output[2], output[2], output[2]] # E и двоичный код
+output_signals = [output[0], output[1], output[2]] # E и двоичный код
 plt.bar(['a1', 'a0', 'E'], output_signals)
 plt.title('Выходные сигналы')
 plt.ylabel('Сигнал')
